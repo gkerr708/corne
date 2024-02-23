@@ -81,21 +81,19 @@ keyboard.keymap = [
     XXXXXXX, KC.EXLM, KC.AT,   KC.HASH, KC.DLR,  KC.PERC,    KC.CIRC,  KC.AMPR, KC.ASTR, XXXXXXX, XXXXXXX, KC.PIPE,\
                                _______, _______, _______,    KC.RGUI,  _______, _______,
 ],
-# 2 - Navigation layer (vim) + function keys 
+# 2 - Navigation layer (vim) + function keys + game layers
 [
     KC.F1,   KC.F2,   KC.F3,  KC.F4,   KC.F5,   KC.F6,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC.VOLU,\
     KC.F7,   KC.F8,   KC.F9,  KC.F10,  KC.F11,  KC.F12,    KC.LEFT, KC.UP,   KC.DOWN, KC.RIGHT, XXXXXXX, KC.VOLD,\
     DOT_L1,  SC2_L1,  CS_L,   XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC.MPLY,\
                                _______, _______, _______,   _______,  _______, _______,
 ],
-# 3 - CSGO layer
-# switch so that when I hold down the knife button it does the inspect animation
-# rebind keys like C and V to useful shit like plant bomb or whatever
+# 3 - CSGO layer (TO DO: in CS, bind 'scoreboard' to 'V' & 'plant bomb' to 'C' & 'inspect' to 'T')
 [
-    KC.TAB,  KC.Q, KC.W, KC.E,  KC.R,   KC.T,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
-    KC.CAPS, KC.A, KC.S, KC.D,  KC.F,   KC.G,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
-    KC.LCTL, KC.Z, KC.X, KC.C,  KC.V,   KC.B,      KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
-                         KC.N1, KC.N2,  KC.N3,     KC.ESC, KC.SPC, MAIN_L,
+    KC.N1,   KC.Q, KC.W, KC.E,    KC.R,   KC.T,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
+    KC.CAPS, KC.A, KC.S, KC.D,    KC.F,   KC.G,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
+    KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,   KC.B,      KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
+                         KC.LCTL, KC.N2,  KC.N3,     KC.ESC, KC.SPC, MAIN_L,
 ],
 # 4 - Starcraft Layer 1 
 [
