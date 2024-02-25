@@ -1,1 +1,1 @@
-# corne
+# Corne keyboard custom firmware

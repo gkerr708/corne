@@ -17,13 +17,14 @@ class SplitType:
     ONEWIRE = const(3)  # unused
     BLE = const(4)
 '''
+keyboard.modules = [] # not sure if this line or the analogous line below is needed
 keyboard.modules.append(Split(split_type=SplitType.UART, split_side=SplitSide.LEFT))
 keyboard.modules.append(Layers())
 keyboard.modules.append(HoldTap())
 
+keyboard.extensions = []
 keyboard.extensions.append(Oled()) 
 keyboard.extensions.append(MediaKeys())
-
 
 
 # Define key-codes for easier readability
@@ -41,6 +42,7 @@ KC.TO(layer)      -->  Activates layer and deactivates all other layers
 KC.TT(layer)      -->  Momentarily activates layer if held, toggles it if tapped repeatedly
 KC.HT(KC.A, KC.B) -->  Hold for A, tap for B
 '''
+
 # Define the key-map layers
 MAIN_LAYER = 0
 NUMBER_LAYER = 1
@@ -63,7 +65,6 @@ DOT_L2  = KC.TG(DOTA_LAYER_2)
 
 # CSGO key-mods 
 T1_HY = KC.HT(KC.N1, KC.Y)# Tap for KC.N1 hold for Y
-
 
 # Key-map definition
 keyboard.keymap = [
@@ -125,17 +126,52 @@ keyboard.keymap = [
 ],
 ]
 
-# OLED stuff, the documentation was really bad for this so I don't think it'll work  
+
 oled_ext = Oled(
     OledData(
         corner_one={0:OledReactionType.STATIC,1:["layer"]},
-        corner_two={0:OledReactionType.LAYER,1:["1","2","3","4","5","6"]},
-        corner_three={0:OledReactionType.LAYER,1:["","","","","",""]},
-        corner_four={0:OledReactionType.LAYER,1:["main","nums","nav","CSGO","SC2_A","SC2_B"]}
+        corner_two={0:OledReactionType.LAYER,1:["0","1","2","3","4","5","6","7"]},
+        corner_three={0:OledReactionType.STATIC,1:["Hello"]},
+        corner_four={0:OledReactionType.LAYER,1:["main","nums","nav","CSGO",
+                                                 "SC2", "SC2",
+                                                 "DOTA","DOTA"]}
         ),
         toDisplay=OledDisplayMode.TXT,flip=False)
 
 if __name__ == '__main__':
     #keyboard.go(hid_type=HIDModes.USB)
     keyboard.go()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
