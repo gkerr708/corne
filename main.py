@@ -10,7 +10,11 @@ keyboard = KMKKeyboard()
 
 
 '''
-# TODO Comment one of these on each side
+# TODO 
+- Comment one of these on each side
+- Bind a holde layer for the escape key (that button will only ever be tapped so it should be nice)
+'''
+'''
 class SplitType:
     UART = const(1)
     I2C = const(2)  # unused
@@ -63,8 +67,9 @@ SC2_L2  = KC.TG(SC2_LAYER_2)
 DOT_L1  = KC.DF(DOTA_LAYER_1)
 DOT_L2  = KC.TG(DOTA_LAYER_2)
 
-# CSGO key-mods 
-T1_HY = KC.HT(KC.N1, KC.Y)# Tap for KC.N1 hold for Y
+# Hold Tap Mods
+T1_HY = KC.HT(KC.N1, KC.Y)
+ECS_ = KC.HT(KC.A, KC.ESC)
 
 # Key-map definition
 keyboard.keymap = [
@@ -141,30 +146,6 @@ oled_ext = Oled(
 if __name__ == '__main__':
     #keyboard.go(hid_type=HIDModes.USB)
     keyboard.go()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
