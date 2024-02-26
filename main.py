@@ -8,13 +8,11 @@ from kmk.extensions.peg_oled_Display import Oled,OledDisplayMode,OledReactionTyp
 
 keyboard = KMKKeyboard()
 
-
 '''
 # TODO 
 - Comment one of these on each side
 - Bind a holde layer for the escape key (that button will only ever be tapped so it should be nice)
-'''
-'''
+
 class SplitType:
     UART = const(1)
     I2C = const(2)  # unused
