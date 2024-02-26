@@ -59,6 +59,7 @@ DOTA_LAYER_2 = 7
 MAIN_L  = KC.DF(MAIN_LAYER)
 NUM_L   = KC.HT(KC.MO(NUMBER_LAYER), KC.TG(NUMBER_LAYER))
 NAV_SFT = KC.HT(KC.LSFT, KC.TG(NAVIGATION_LAYER))  
+NAV_ALT = KC.HT(KC.LALT, KC.TG(NAVIGATION_LAYER))  
 CS_L    = KC.DF(CS_LAYER) 
 SC2_L1  = KC.DF(SC2_LAYER_1)
 SC2_L2  = KC.TG(SC2_LAYER_2)
@@ -72,59 +73,64 @@ ECS_ = KC.HT(KC.A, KC.ESC)
 # Key-map definition
 keyboard.keymap = [
 # 0 - Main layer
+# TODO: add a HT for the alt key
 [
-    KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,      KC.Y,   KC.U,  KC.I,    KC.O,    KC.P,    XXXXXXX,\
-    KC.CAPS, KC.A, KC.S, KC.D,    KC.F,    KC.G,      KC.H,   KC.J,  KC.K,    KC.L,    KC.SCLN, KC.ENT,\
-    KC.LCTL, KC.Z, KC.X, KC.C,    KC.V,    KC.B,      KC.N,   KC.M,  KC.COMM, KC.DOT,  KC.SLSH, KC.BSLS,\
-                         KC.LALT, KC.BSCP, NUM_L,     KC.ESC, KC.SPC, NAV_SFT, 
+    KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,             KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSLS,\
+    KC.CAPS, KC.A, KC.S, KC.D,    KC.F,    KC.G,             KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ENT,\
+    KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,    KC.B,             KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.QUOT,\
+                         NAV_ALT, KC.BSCP, NUM_L,            KC.ESC, KC.SPC, KC.LCTL, 
 ],
 # 1 - Numbers + Symbols layer 
 [
-    KC.GRV,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,      KC.N6,    KC.N7,   KC.N8,   KC.N9,   KC.N0,   XXXXXXX,\
-    KC.EQL,  KC.PLUS, KC.MINS, KC.ASTR, KC.DLR,  KC.AMPR,    KC.UNDS,  KC.LCBR, KC.RCBR, KC.LPRN, KC.RPRN, XXXXXXX,\
-    XXXXXXX, KC.EXLM, KC.AT,   KC.HASH, KC.DLR,  KC.PERC,    KC.CIRC,  KC.AMPR, KC.ASTR, XXXXXXX, XXXXXXX, KC.PIPE,\
-                               _______, _______, _______,    KC.RGUI,  _______, _______,
+    KC.GRV,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,      KC.N6,    KC.N7,   KC.N8,   KC.N9,   KC.N0,   KC.RGUI,\
+    KC.EQL,  KC.PLUS, KC.MINS, KC.ASTR, KC.DLR,  KC.AMPR,    KC.UNDS,  KC.LCBR, KC.RCBR, KC.LPRN, KC.RPRN, _______,\
+    _______, KC.EXLM, KC.AT,   KC.HASH, KC.DLR,  KC.PERC,    KC.CIRC,  KC.AMPR, KC.ASTR, KC.LBRC, KC.RBRC, KC.PIPE,\
+                               _______, _______, _______,    _______,  _______, _______,
 ],
 # 2 - Navigation layer (vim) + function keys + game layers
 [
-    KC.F1,   KC.F2,   KC.F3,  KC.F4,   KC.F5,   KC.F6,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC.VOLU,\
-    KC.F7,   KC.F8,   KC.F9,  KC.F10,  KC.F11,  KC.F12,    KC.LEFT, KC.UP,   KC.DOWN, KC.RIGHT, XXXXXXX, KC.VOLD,\
-    DOT_L1,  SC2_L1,  CS_L,   XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC.MPLY,\
-                               _______, _______, _______,   _______,  _______, _______,
+    KC.F1,   KC.F2,   KC.F3,  KC.F4,   KC.F5,   KC.F6,       XXXXXXX, XXXXXXX, MAIN_L,  XXXXXXX,  KC.VOLU, KC.MNXT,\
+    KC.F7,   KC.F8,   KC.F9,  KC.F10,  KC.F11,  KC.F12,      KC.LEFT, KC.UP,   KC.DOWN, KC.RIGHT, KC.VOLD, KC.MPRV,\
+    DOT_L1,  SC2_L1,  CS_L,   XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC.MPLY, XXXXXXX,\
+                               _______, _______, _______,    _______,  _______, _______,
 ],
-# 3 - CSGO layer (TO DO: in CS, bind 'scoreboard' to 'V' & 'plant bomb' to 'C' & 'inspect' to 'T')
+# 3 - CSGO layer, TODO: rebind the following keys
+# V  ->  scoreboard   
+# C  ->  plant bomb   
+# T  ->  inspect weapon
+# X  ->  ghost mode
 [
-    KC.N1,   KC.Q, KC.W, KC.E,    KC.R,   KC.T,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
-    KC.CAPS, KC.A, KC.S, KC.D,    KC.F,   KC.G,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
-    KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,   KC.B,      KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
-                         KC.LCTL, KC.N2,  KC.N3,     KC.ESC, KC.SPC, MAIN_L,
+    KC.CAPS, KC.Q, KC.W, KC.E,    KC.R,  KC.T,               KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
+    KC.N1,   KC.A, KC.S, KC.D,    KC.F,  KC.G,               KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
+    KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,  KC.B,               KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
+                         KC.LCTL, KC.N2, KC.N3,              KC.ESC, KC.SPC, MAIN_L,
 ],
 # 4 - Starcraft Layer 1 
 [
-    KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
-    KC.LSFT, KC.A, KC.S, KC.D,    KC.F,    KC.G,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
-    KC.LCTL, KC.Z, KC.X, KC.C,    KC.V,    KC.B,      KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
-                         KC.LALT, KC.LCTL, SC2_L2,    KC.ESC, KC.SPC, MAIN_L,
+    KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,             KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
+    KC.LSFT, KC.A, KC.S, KC.D,    KC.F,    KC.G,             KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
+    KC.LCTL, KC.Z, KC.X, KC.C,    KC.V,    KC.B,             KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
+                         KC.LALT, KC.LCTL, SC2_L2,           KC.ESC, KC.SPC, MAIN_L,
 ],
 # 5 - Starcraft Layer 2
 [
-    KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,   KC.F6,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
-    KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,   KC.N6,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
+    KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,   KC.F6,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
+    KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,   KC.N6,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
                                _______, _______, _______,    KC.ESC, KC.SPC, MAIN_L,
 ],
 # 6 - Dota 2 Layer 1 
 [
-    KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
-    KC.CAPS, KC.A, KC.S, KC.D,    KC.F,    KC.G,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
-    KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,    KC.B,      KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
-                         KC.LALT, KC.LCTL, SC2_L2,    KC.ESC, KC.SPC, MAIN_L,
+    KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,             KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
+    KC.CAPS, KC.A, KC.S, KC.D,    KC.F,    KC.G,             KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
+    KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,    KC.B,             KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
+                         KC.LALT, SC2_L2,  KC.LCTL,          KC.ESC, KC.SPC, MAIN_L,
 ],
 # 7 - Dota 2 Layer 2
 [
-    KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,   KC.F6,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,
-    KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,   KC.N6,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,
+    KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,   KC.F6,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
+    KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,   KC.N6,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
                                _______, _______, _______,    KC.ESC, KC.SPC, MAIN_L,
 ],
 ]
