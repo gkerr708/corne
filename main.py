@@ -116,21 +116,22 @@ keyboard.keymap = [
 [
     KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,   KC.F6,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
     KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,   KC.N6,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
+    _______, _______, _______, _______, _______, _______,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
                                _______, _______, _______,    KC.ESC, KC.SPC, MAIN_L,
 ],
 # 6 - Dota 2 Layer 1 
+# I'm wondering if i should shift down my home row to ASDF rather than QWER
 [
     KC.TAB,  KC.Q, KC.W, KC.E,    KC.R,    KC.T,             KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
     KC.CAPS, KC.A, KC.S, KC.D,    KC.F,    KC.G,             KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
     KC.LSFT, KC.Z, KC.X, KC.C,    KC.V,    KC.B,             KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
-                         KC.LALT, SC2_L2,  KC.LCTL,          KC.ESC, KC.SPC, MAIN_L,
+                         KC.LALT, DOT_L2,  KC.LCTL,          KC.ESC, KC.SPC, MAIN_L,
 ],
 # 7 - Dota 2 Layer 2
 [
     KC.F1,   KC.F2,   KC.F3,   KC.F4,   KC.F5,   KC.F6,      KC.Y,   KC.U,   KC.I,    KC.O,    KC.P,    KC.BSPC,\
     KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,   KC.N6,      KC.H,   KC.J,   KC.K,    KC.L,    KC.SCLN, KC.ESC,\
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
+    _______, _______, _______, _______, _______, _______,    KC.N,   KC.M,   KC.COMM, KC.DOT,  KC.SLSH, KC.ENT,\
                                _______, _______, _______,    KC.ESC, KC.SPC, MAIN_L,
 ],
 ]
