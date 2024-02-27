@@ -82,7 +82,7 @@ keyboard.keymap = [
 ],
 # 1 - Numbers + Symbols layer 
 [
-    KC.GRV,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,      KC.N6,    KC.N7,   KC.N8,   KC.N9,   KC.N0,   KC.RGUI,\
+    KC.GRV,  KC.N1,   KC.N2,   KC.N3,   KC.N4,   KC.N5,      KC.N6,    KC.N7,   KC.N8,   KC.N9,   KC.N0,   _______,\
     KC.EQL,  KC.PLUS, KC.MINS, KC.ASTR, KC.DLR,  KC.AMPR,    KC.UNDS,  KC.LCBR, KC.RCBR, KC.LPRN, KC.RPRN, _______,\
     _______, KC.EXLM, KC.AT,   KC.HASH, KC.DLR,  KC.PERC,    KC.CIRC,  KC.AMPR, KC.ASTR, KC.LBRC, KC.RBRC, KC.PIPE,\
                                _______, _______, _______,    _______,  _______, _______,
@@ -91,7 +91,7 @@ keyboard.keymap = [
 [
     KC.F1,   KC.F2,   KC.F3,  KC.F4,   KC.F5,   KC.F6,       XXXXXXX, XXXXXXX, MAIN_L,  XXXXXXX,  KC.VOLU, KC.MNXT,\
     KC.F7,   KC.F8,   KC.F9,  KC.F10,  KC.F11,  KC.F12,      KC.LEFT, KC.UP,   KC.DOWN, KC.RIGHT, KC.VOLD, KC.MPRV,\
-    DOT_L1,  SC2_L1,  CS_L,   XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC.MPLY, XXXXXXX,\
+    DOT_L1,  SC2_L1,  CS_L,   XXXXXXX, XXXXXXX, KC.RGUI,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC.MPLY, XXXXXXX,\
                                _______, _______, _______,    _______,  _______, _______,
 ],
 # 3 - CSGO layer, TODO: rebind the following keys
