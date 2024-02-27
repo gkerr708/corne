@@ -42,7 +42,7 @@ KC.LT(layer, kc)  -->  Momentarily activates layer if held, sends kc if tapped
 KC.TG(layer)      -->  Toggles the layer (enables it if not active, and vice versa)
 KC.TO(layer)      -->  Activates layer and deactivates all other layers
 KC.TT(layer)      -->  Momentarily activates layer if held, toggles it if tapped repeatedly
-KC.HT(KC.A, KC.B) -->  Hold for A, tap for B
+KC.HT(KC.TAP, KC.HOLD, prefer_hold=True, tap_interrupted=False, tap_time=None, repeat=HoldTapRepeat.NONE)
 '''
 
 # Define the key-map layers
@@ -60,15 +60,15 @@ MAIN_L  = KC.DF(MAIN_LAYER)
 NUM_L   = KC.HT(KC.MO(NUMBER_LAYER), KC.TG(NUMBER_LAYER))
 NAV_SFT = KC.HT(KC.LSFT, KC.TG(NAVIGATION_LAYER))  
 NAV_ALT = KC.HT(KC.LALT, KC.TG(NAVIGATION_LAYER))  
+NAV_ESC = KC.HT(KC.MO(NAVIGATION_LAYER), KC.ESC) # hold for nav layer, tap for excape
 CS_L    = KC.DF(CS_LAYER) 
 SC2_L1  = KC.DF(SC2_LAYER_1)
-SC2_L2  = KC.TG(SC2_LAYER_2)
+SC2_L2  = KC.MO(SC2_LAYER_2)
 DOT_L1  = KC.DF(DOTA_LAYER_1)
-DOT_L2  = KC.TG(DOTA_LAYER_2)
+DOT_L2  = KC.MO(DOTA_LAYER_2)
 
 # Hold Tap Mods
 T1_HY = KC.HT(KC.N1, KC.Y)
-ECS_ = KC.HT(KC.A, KC.ESC)
 
 # Key-map definition
 keyboard.keymap = [
