@@ -20,6 +20,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+// this is for booting
+#define BOOTMAGIC_ROW 0
+#define BOOTMAGIC_COLUMN 0
+
 //#define USE_MATRIX_I2C
 
 /* Select hand configuration */
